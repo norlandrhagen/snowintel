@@ -1,0 +1,16 @@
+name: snowintel
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - python=3.09
+  - jupyter
+  - numpy
+  - xarray
+  - pandas
+  - fastparquet
+  - pre-commit
+  - pytest
+  - ulmo
+  - zeep
+  - pip
