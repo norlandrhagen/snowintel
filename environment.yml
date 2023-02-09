@@ -11,6 +11,8 @@ dependencies:
   - fastparquet
   - pre-commit
   - pytest
-  - ulmo
+  - xmltodict
   - zeep
   - pip
+  - pip:
+      - -e .
