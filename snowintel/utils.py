@@ -89,3 +89,20 @@ def get_sites() -> pd.DataFrame:
     response = client.service.GetSites("")
     cdf = _parse_site_xml(response=response)
     return cdf
+
+
+def get_snotel_by_site_ids(
+    site_ids: list, start_date: str, end_date: str, variables: list
+) -> pd.DataFrame:
+    pass
+
+
+def get_variables_by_site(site_id: str) -> list:
+    """_summary_
+
+    :param site_id: SNOTEL site_id. Ex: '301_CA_SNTL'
+    :type site_id: str
+    :return: available variable(s) at site
+    :rtype: list
+    """
+    pass
