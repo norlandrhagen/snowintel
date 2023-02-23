@@ -4,6 +4,7 @@ channels:
   - nodefaults
 dependencies:
   - python==3.09
+  - geopandas
   - jupyter
   - numpy
   - xarray

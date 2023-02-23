@@ -14,9 +14,9 @@ class GetSites:
     """
 
     dataframe: pd.DataFrame = None  # Assigned in __post__init__
-    state_filter: str | list | None = None
-    minimum_elevation: str | int | None = None
-    maximum_elevation: str | int | None = None
+    state_filter: str | list = None
+    minimum_elevation: str | list = None
+    maximum_elevation: str | list = None
 
     def __post_init__(self):
         self.dataframe = get_sites()
@@ -56,6 +56,19 @@ class GetSites:
                 float(minimum_elevation), float(maximum_elevation)
             )
         ]
+
+    def geodataframe(self):
+        try:
+            import geopandas as gpd
+        except Exception:
+            raise ImportError(
+                'Geopandas is not installed. Please install with conda/mamba "conda install -c conda-forge geopandas"'
+            )
+
+        return gpd.GeoDataFrame(
+            self.dataframe,
+            geometry=gpd.points_from_xy(self.dataframe.longitude, self.dataframe.latitude),
+        )
 
 
 @dataclass
