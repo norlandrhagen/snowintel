@@ -2,9 +2,13 @@
 
 ## ToDo
 
-- Method to get all (SNOTEL) sites - class, has methods to convert to dataframe or dict or map or write
-- Given a snotel site_id or name? retrieve data for selected period
-- Given a list of snotel site_id's, retrieve data and concat for selected period
+GetSites:
+
+- ToDo / Future Methods:
+- Find nearest n sites. Input site_ID & n closest sites
+- Find sites within radius of site
+- Find sites within radius of input lat/lon pair
+- Filter sites by elevation
 
 # snotel_sites = {
 
