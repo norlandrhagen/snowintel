@@ -224,8 +224,6 @@ def get_snotel_data_by_site_id(
         site_code, variable_code, startDate=start_date_valid, endDate=end_date_valid
     )
 
-    # parse xml
-
     return _parse_var_xml(response=response)
 
 

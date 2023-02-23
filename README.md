@@ -1,6 +1,34 @@
 # snowintel
 
+**Warning: In development, nothing stable**
+
+## Installation
+
+`pip install git+https://github.com/norlandrhagen/snowintel`
+
+## Example Usage
+
+### Get Site Information
+
+```python
+from snowintel.core import getSites
+
+gs = getSites()
+```
+
+### Retrieve Data for a SNOTEL Site
+
+```python
+from snowintel.utils import get_snotel_data_by_site_id
+
+df = get_snotel_data_by_site_id(site_id='865_UT_SNTL',start_date='2023-01-01',end_date='2023-02-23',variable='SNWD_D')
+```
+
 ## ToDo
+
+- Docs
+- Tests
+- Mapping
 
 GetSites:
 
