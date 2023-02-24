@@ -1,11 +1,40 @@
-
 [project]
 name = "snowintel"
+version = "0.0.1"
 description = "mini library for reading SNOTEL data"
 readme = "README.md"
-requires-python = ">=3.09"
-
+requires-python = ">=3.9"
+license = {file = "LICENSE.txt"}
+keywords = ["snotel", "snow", "water", "swe", "snopack"]
+authors = [
+  {email = "norlandrhagen@gmail.com"},
+  {name = "Norland Raphael Hagen"}
+]
 dynamic = ["version"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Programming Language :: Python"
+]
+
+
+
+[project.optional-dependencies]
+test = [
+  "pytest",
+  "pytest-cov[all]"
+]
+docs = [
+"sphinx",
+"pydata-sphinx-theme"
+
+]
+geospatial = [
+"geopandas",
+"folium"
+]
+
+[project.urls]
+repository = "https://github.com/norlandrhagen/snowintel"
 
 
 [tool.black]
