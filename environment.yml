@@ -13,7 +13,7 @@ dependencies:
   - pre-commit
   - pytest
   - pydata-sphinx-theme
-  - sphinx 
+  - sphinx
   - xmltodict
   - zeep
   - pip
