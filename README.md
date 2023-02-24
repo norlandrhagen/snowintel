@@ -24,6 +24,23 @@ from snowintel.utils import get_snotel_data_by_site_id
 df = get_snotel_data_by_site_id(site_id='865_UT_SNTL',start_date='2023-01-01',end_date='2023-02-23',variable='SNWD_D')
 ```
 
+### Visualize Sites
+
+```python
+
+from snowintel.core import GetSites
+import folium
+
+gs = GetSites(state_filter="UT")
+
+gdf = gs.geodataframe()
+
+m = gs.return_map()
+
+m
+
+```
+
 ## ToDo
 
 - Docs
