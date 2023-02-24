@@ -1,4 +1,5 @@
 from datetime import datetime
+from typing import Union
 
 import pandas as pd
 import requests
@@ -129,7 +130,7 @@ def get_site_variables(*, site_id: str) -> pd.DataFrame:
     )
 
 
-def _validate_input_site_variables(*, site_id: str, input_vars: str | list) -> bool:
+def _validate_input_site_variables(*, site_id: str, input_vars: Union[str, list]) -> bool:
     """helper function to validate if input variables are available for selected snotel site"""
     if not isinstance(input_vars, list):
         input_vars = [input_vars]

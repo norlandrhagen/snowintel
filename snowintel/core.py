@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+from typing import Union
 
 import pandas as pd
 
@@ -16,9 +17,9 @@ class GetSites:
 
     dataframe: pd.DataFrame = None  # Assigned in __post__init__
     geodataframe = None
-    state_filter: str | list = None
-    minimum_elevation: str | list = None
-    maximum_elevation: str | list = None
+    state_filter: Union[str, list] = None
+    minimum_elevation: Union[str, list] = None
+    maximum_elevation: Union[str, list] = None
 
     def __post_init__(self):
         self.dataframe = get_sites()
@@ -76,7 +77,7 @@ class GetSites:
         return gdf
 
     def return_map(self, basemap="google_terrain"):
-        return create_map(basemap=basemap)
+        return create_map(gdf=self.geodataframe, basemap=basemap)
 
 
 @dataclass
