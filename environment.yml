@@ -12,6 +12,8 @@ dependencies:
   - fastparquet
   - pre-commit
   - pytest
+  - pydata-sphinx-theme
+  - sphinx 
   - xmltodict
   - zeep
   - pip
