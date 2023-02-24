@@ -46,6 +46,7 @@ def _clean_last_site_df(*, df: pd.DataFrame) -> pd.DataFrame:
     :rtype: pd.DataFrame
     """
     site_code = df["siteCode"].apply(pd.Series)["#text"]
+    site_name = df["siteName"]
     state = site_code.str.split("_", expand=True)[1]
     latlon = (
         df["geoLocation"]
@@ -55,15 +56,18 @@ def _clean_last_site_df(*, df: pd.DataFrame) -> pd.DataFrame:
     latitude = latlon["latitude"]
     longitude = latlon["longitude"]
     elevation_m = df["elevation_m"].astype(float).round(1)
+    elevation_ft = (elevation_m * 3.28084).round(1)
 
     # Note: 'siteProperty' parsing ignored for now and removed from cleaned df
     cdf = pd.DataFrame(
         {
             "site_code": site_code,
+            "site_name": site_name,
             "state": state,
             "latitude": latitude,
             "longitude": longitude,
             "elevation_m": elevation_m,
+            "elevation_ft": elevation_ft,
         }
     )
     # Drops the invalid site code

@@ -83,8 +83,3 @@ class GetSites:
 @dataclass
 class GetSitesSpatialQuery(GetSites):
     pass
-
-
-# @dataclass
-# class GetSnotel():
-#     site_ids: str | list
