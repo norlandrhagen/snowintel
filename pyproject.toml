@@ -1,16 +1,16 @@
 [project]
 name = "snowintel"
-version = "0.0.1"
+version = "2023.0.0"
 description = "mini library for reading SNOTEL data"
 readme = "README.md"
 requires-python = ">=3.9"
 license = {file = "LICENSE.txt"}
-keywords = ["snotel", "snow", "water", "swe", "snopack"]
+keywords = ["snotel", "snow", "water", "swe", "snowSpack"]
 authors = [
   {email = "norlandrhagen@gmail.com"},
   {name = "Norland Raphael Hagen"}
 ]
-dynamic = ["version"]
+
 classifiers = [
   "Development Status :: 3 - Alpha",
   "Programming Language :: Python"
@@ -39,7 +39,7 @@ repository = "https://github.com/norlandrhagen/snowintel"
 
 [tool.black]
 line-length = 100
-target-version = ['py310']
+target-version = ['py39']
 
 [build-system]
 requires = [
@@ -67,7 +67,7 @@ addopts = "--cov=./ --cov-report=xml --cov-append --cov-report term-missing --ve
 
 [tool.ruff]
 line-length = 100
-target-version = "py310"
+target-version = "py39"
 builtins = ["ellipsis"]
 # Exclude a variety of commonly ignored directories.
 exclude = [
