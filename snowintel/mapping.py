@@ -55,6 +55,7 @@ def create_map(*, gdf, basemap="google_terrain"):
         m.add_child(
             folium.CircleMarker(
                 location=coords,
+                z_index_offset=1000,
                 radius=10,  # in meters
                 fill_color="#f25c3c",
                 color="#f25c3c",
